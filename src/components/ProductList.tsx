@@ -23,13 +23,9 @@ const ProductList = ({ FoodItems }: ProductListProps) => {
       <div className="flex gap-4">
         {FoodItems.map((item) => (
           <ProductItem
-            image={item.image}
-            description={item.description}
-            price={item.price}
-            isNew={item.isNew}
-            key={item.id}
-            onIncrement={handelIncrement}
-          />
+          product={item}
+          key={item.id}
+          onIncrement={handelIncrement}          />
         ))}
       </div>
     </div>
